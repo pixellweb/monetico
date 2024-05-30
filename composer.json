@@ -1,0 +1,28 @@
+{
+    "name": "pixellweb/monetico",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "B1nj",
+            "email": "postmaster@b1nj.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "PixellWeb\\Monetico\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "PixellWeb\\Monetico\\MoneticoServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+
+    }
+}
