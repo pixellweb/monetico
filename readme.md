@@ -25,7 +25,7 @@ MONETICO_CODE_SOCIETE=xxxxx
 
 $billing = new OrderContextBilling($reservation->adresse, $reservation->ville, $reservation->cp, $reservation->pays->alpha2);
 $context = new OrderContext($billing);
-$payment_request = new PaymentRequest($reservation->reference, $reservation->total, $context);
+$payment_request = new PaymentRequest($reservation->reference, $reservation->total, $context, $reservation->email);
 $payment_request->setUrlRetourOk(route('reservation.confirmation'));
 $payment_request->setUrlRetourErreur(route('paiement.refuse'));
 
