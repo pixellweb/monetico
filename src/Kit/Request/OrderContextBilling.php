@@ -155,7 +155,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setCivility(?string $civility): void
     {
-        $this->civility = $civility;
+        $this->civility = str_limit($civility, 32, '');
     }
 
     /**
@@ -171,7 +171,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setName(?string $name): void
     {
-        $this->name = $name;
+        $this->name = str_limit($name, 45, '');
     }
 
     /**
@@ -187,7 +187,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setFirstName(?string $firstName): void
     {
-        $this->firstName = $firstName;
+        $this->firstName = str_limit($firstName, 45, '');
     }
 
     /**
@@ -203,7 +203,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setLastName(?string $lastName): void
     {
-        $this->lastName = $lastName;
+        $this->lastName = str_limit($lastName, 45, '');
     }
 
     /**
@@ -219,7 +219,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setMiddleName(?string $middleName): void
     {
-        $this->middleName = $middleName;
+        $this->middleName = str_limit($middleName, 150, '');
     }
 
     /**
@@ -235,7 +235,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddress(?string $address): void
     {
-        $this->address = $address;
+        $this->address = str_limit($address, 255, '');
     }
 
     /**
@@ -251,7 +251,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine1(string $addressLine1): void
     {
-        $this->addressLine1 = $addressLine1;
+        $this->addressLine1 = str_limit($addressLine1, 50, '');
     }
 
     /**
@@ -267,7 +267,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine2(?string $addressLine2): void
     {
-        $this->addressLine2 = $addressLine2;
+        $this->addressLine2 = str_limit($addressLine2, 50, '');
     }
 
     /**
@@ -283,7 +283,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine3(?string $addressLine3): void
     {
-        $this->addressLine3 = $addressLine3;
+        $this->addressLine3 = str_limit($addressLine3, 50, '');
     }
 
     /**
@@ -299,7 +299,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setCity(string $city): void
     {
-        $this->city = $city;
+        $this->city = str_limit($city, 50, '');
     }
 
     /**
@@ -315,7 +315,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setPostalCode(string $postalCode): void
     {
-        $this->postalCode = $postalCode;
+        $this->postalCode = str_limit($postalCode, 10, '');
     }
 
     /**
