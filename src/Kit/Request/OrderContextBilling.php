@@ -2,6 +2,8 @@
 
 namespace PixellWeb\Monetico\Kit\Request;
 
+use Illuminate\Support\Str;
+
 class OrderContextBilling implements \JsonSerializable
 {
     /**
@@ -155,7 +157,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setCivility(?string $civility): void
     {
-        $this->civility = str_limit($civility, 32, '');
+        $this->civility = Str::limit($civility, 32, '');
     }
 
     /**
@@ -171,7 +173,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setName(?string $name): void
     {
-        $this->name = str_limit($name, 45, '');
+        $this->name = Str::limit($name, 45, '');
     }
 
     /**
@@ -187,7 +189,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setFirstName(?string $firstName): void
     {
-        $this->firstName = str_limit($firstName, 45, '');
+        $this->firstName = Str::limit($firstName, 45, '');
     }
 
     /**
@@ -203,7 +205,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setLastName(?string $lastName): void
     {
-        $this->lastName = str_limit($lastName, 45, '');
+        $this->lastName = Str::limit($lastName, 45, '');
     }
 
     /**
@@ -219,7 +221,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setMiddleName(?string $middleName): void
     {
-        $this->middleName = str_limit($middleName, 150, '');
+        $this->middleName = Str::limit($middleName, 150, '');
     }
 
     /**
@@ -235,7 +237,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddress(?string $address): void
     {
-        $this->address = str_limit($address, 255, '');
+        $this->address = Str::limit($address, 255, '');
     }
 
     /**
@@ -251,7 +253,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine1(string $addressLine1): void
     {
-        $this->addressLine1 = str_limit($addressLine1, 50, '');
+        $this->addressLine1 = Str::limit($addressLine1, 50, '');
     }
 
     /**
@@ -267,7 +269,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine2(?string $addressLine2): void
     {
-        $this->addressLine2 = str_limit($addressLine2, 50, '');
+        $this->addressLine2 = Str::limit($addressLine2, 50, '');
     }
 
     /**
@@ -283,7 +285,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setAddressLine3(?string $addressLine3): void
     {
-        $this->addressLine3 = str_limit($addressLine3, 50, '');
+        $this->addressLine3 = Str::limit($addressLine3, 50, '');
     }
 
     /**
@@ -299,7 +301,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setCity(string $city): void
     {
-        $this->city = str_limit($city, 50, '');
+        $this->city = Str::limit($city, 50, '');
     }
 
     /**
@@ -315,7 +317,7 @@ class OrderContextBilling implements \JsonSerializable
      */
     public function setPostalCode(string $postalCode): void
     {
-        $this->postalCode = str_limit($postalCode, 10, '');
+        $this->postalCode = Str::limit($postalCode, 10, '');
     }
 
     /**
