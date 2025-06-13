@@ -21,6 +21,11 @@ class PaymentRequest extends KitPaymentRequest
         $this->setMail($mail);
     }
 
+    protected function paymentPageUrl(): string
+    {
+        return config('monetico.test') ? config('monetico.payment_page_url_test') : config('monetico.payment_page_url_prod');
+    }
+
 
     public function link()
     {
@@ -30,7 +35,7 @@ class PaymentRequest extends KitPaymentRequest
         }
         $query = ltrim($query, '&');
 
-        return config('monetico.payment_page_url') . '?' . $query;
+        return $this->paymentPageUrl() . '?' . $query;
     }
 
 
