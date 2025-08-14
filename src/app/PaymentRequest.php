@@ -15,7 +15,7 @@ class PaymentRequest extends KitPaymentRequest
 
     public function __construct(string $reference, float $montant, OrderContext $contexteCommande, string $mail)
     {
-        parent::__construct($reference, $montant, Currency::EUR, Language::FR, $contexteCommande);
+        parent::__construct($reference, number_format($montant, 2), Currency::EUR, Language::FR, $contexteCommande);
 
         // Mail obligatoire, sinon, il n'y a pas de retour automatique sur le site après paiement
         $this->setMail($mail);
