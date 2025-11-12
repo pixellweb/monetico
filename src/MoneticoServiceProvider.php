@@ -2,6 +2,7 @@
 
 namespace PixellWeb\Monetico;
 
+use App\Http\Middleware\TrimStrings;
 use Illuminate\Support\ServiceProvider;
 
 
@@ -25,6 +26,8 @@ class MoneticoServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->addCustomConfigurationValues();
+
+        TrimStrings::skipWhen(fn ($request) => $request->url() === route(config('monetico.url_repondre_a')));
     }
 
     public function addCustomConfigurationValues()

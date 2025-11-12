@@ -20,4 +20,5 @@ return [
 
     'rule_exists' => 'exists:reservations,reference',
 
+    'url_repondre_a'   => 'paiement.ipn',
 ];

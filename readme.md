@@ -9,7 +9,7 @@ L'url de l'interface de retour (IPN) est à renseignée aussi dans le backoffice
 
 
 ```
-### fichier .en
+### fichier .env
 
 MONETICO_TEST=1
 MONETICO_CLE_MAC=xxxxxxxxxxxx
@@ -39,4 +39,6 @@ return redirect()->away($payment_request->link());
 La route IPN doit être en GET et en POST
 Pour passer en production, le serveur commerçant doit avoir renvoyé un accusé
 de réception avec un sceau validé pour les trois derniers tests
+
+Documentation : https://www.monetico-paiement.fr/fr/installer/telechargements.html
 
