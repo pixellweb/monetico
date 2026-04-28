@@ -44,7 +44,7 @@ class IPNResponse extends HttpFormRequest
             'brand'       => 'required',
             //'status3ds'   => 'required',
             'numauto'     => 'required',
-            'originecb'   => 'required',
+            //'originecb'   => 'required',
             'bincb'       => '',
             'hpancb'      => '',
             'ipclient'    => 'required',
